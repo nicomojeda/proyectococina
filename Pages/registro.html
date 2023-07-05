@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrate - Recetas para todos</title>
     <link rel="shortcut icon" href="../img/favicon-recetas.png">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="../css/estilos.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
@@ -14,48 +20,64 @@
 </head>
 <body>
     <header>
-            <section class = "caja1">
+            <section class = "logo">
                 <img src="../img/Logo2.png">
             </section>
-            <section class = "caja2">
+            <section class = "titulo">
                 <h1>Registrate</h1>
             </section>
             <nav class="cajanav">
                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./comida-hoy.html">¿Qué Comemos?</a></li>
-                    <li><a href="./veggies.html">Veggies</a></li>
-                    <li><a href="./postres.html">Postres</a></li>
+                    <li><a href="../index.html" style="text-decoration:none" >Inicio</a></li>
+                    <li><a href="./comida-hoy.html" style="text-decoration:none">¿Qué Comemos?</a></li>
+                    <li><a href="./veggies.html" style="text-decoration:none">Veggies</a></li>
+                    <li><a href="./postres.html" style="text-decoration:none">Postres</a></li>
                 </ul>
             </nav>
     </header>
-    <main>
-        <form action="" class="articuloRegistro">
+    <main class="conteiner row">
+        <form action="" class="articuloRegistro row column-6 column-md-12 column-lg-12">
             <h2>¡Registrate para recibir recetas diarias!</h2>
             <ul>
-                <li class="listaVertical">
-                    <input name="name" type="text">
-                    <label for="name">Ingresá tu nombre</label>
-                </li>
-                <li class="listaVertical">
-                <input name="user" type="text">
-                <label for="user">Elegí tu usuario</label>
-                </li>
-                <input name="mail" type="email">
-                <label for="mail">Ingresa tu email</label>
-                <li class="listaVertical">
-                <input name="pass" type="password">
-                <label for="pass">Ingresa una contraseña</label>
-                </li>
-                <li class="listaVertical">
-                <button type="submit">Enviar</button>
-                </li>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Apellido y nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="mail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="mail" placeholder="Ingresa tu email">
+                </div>
+                <div class="mb-3">
+                    <label for="usuario" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+                </div>
+                <label for="inputPassword5" class="form-label">Contraseña</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+                <div id="passwordHelpBlock" class="form-text">
+                <label for="menues" class="form-label">Elegí tu menú</label>
+                <select class="form-select" aria-label="" id="menues">
+                        <option selected>Todo</option>
+                        <option value="1">Veggie</option>
+                        <option value="2">Postre</option>
+                </select>             
             </ul>
+            <button type="submit" class="btn btn-light">Enviar</button>
         </form>
-        <section class="registroPromo">
+        <section class="registroPromo column-6 column-md-12 column-lg-12">
             <img src="../img/dontorpollo.jpg">
             <h4>Si no sabes que cocinar pedite un <a href="https://www.instagram.com/dontorpollo/">Dontor!</a></h4>
         </section>
     </main>
+    <!--FOOTER + REDES-->
+    <footer>
+        <h2>¡Encontranos en nuestras redes!</h2>
+        <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+            <button type="button" class="btn btn-outline-primary"><a href="https://www.twitter.com/" style=" text-decoration:none">Twitter</a></button>
+            <button type="button" class="btn btn-outline-primary"><a href="https://www.instagram.com/" style=" text-decoration:none">Instagram</a></button>
+            <button type="button" class="btn btn-outline-primary"><a href="https://www.Facebook.com/" style=" text-decoration:none">Facebook</a></button>
+            <button type="button" class="btn btn-outline-primary"><a href="https://www.YouTube.com/" style=" text-decoration:none">YouTube</a></button>
+            <button type="button" class="btn btn-outline-primary"><a href="https://www.tiktok.com/" style=" text-decoration:none">TikTok</a></button>
+          </div>
+</footer>
 </body>
 </html>
