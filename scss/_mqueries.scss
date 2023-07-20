@@ -1,0 +1,162 @@
+@media (min-width: 0) and (max-width: 576px){
+    *{
+        font-family: 'Kalam', cursive;
+        }
+
+    header{
+        display: grid;
+        grid-template-areas:
+        "logo"
+        "titulo"
+        "cajanav";
+        justify-items: left;
+        width: $ancho-full;
+        background-repeat: repeat-x;
+
+
+
+
+
+        .logo{
+            grid-area: logo;
+            display: block;
+            width: 200px;
+            height: 200px;
+
+        }
+
+
+
+        .titulo{
+            display: block;
+            grid-area: titulo;
+            width: $ancho-full;
+            height: 100px;
+            padding: 10px 10px 10px 10px;
+            align-items: left;
+            margin-top: 75px;
+            margin-left: 2px;
+        }
+
+        .cajanav {
+            grid-area: cajanav;
+            display: block;
+            width: $ancho-full;
+            padding: 10px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+
+        h1{
+            font-size: 40px;
+        }
+    
+    
+    }
+
+
+    main{
+        align-items: left;
+        width: 100%;
+        background-color: black;
+
+        /*PAGINA PRINCIPAL*/
+        .articuloPagPrincipal{
+            display: inline-block;
+            width: 80%;
+            background-color: $color-articulo;
+            border: 10px solid $color-borde-articulo;
+            padding: 50px;
+            margin: 20px;
+            font-size: xx-large;
+        }
+
+        /*PAGINA REGISTRO*/
+        .articuloRegistro{
+            display: block;
+            width: 80%;
+            height: 700px;
+            background-color: rgb(245, 170, 189);
+            border: 10px solid rgb(238, 156, 156);
+            padding: 50px;
+            font-size: medium;
+
+
+    
+            .listaVertical{
+                display: block;
+            }
+    
+        }
+    
+        .registroPromo{
+            display: inline-block;
+            width: 80%;
+            height: 600px;
+            margin-top: 10px;
+            margin-left: 20px;
+            text-decoration-color: white;
+        }
+    
+        /*PAGINA QUE COMEMOS*/
+        .articuloQueComemos{
+            display: inline-block;
+            width: 90%;
+            background-color: $color-articulo;
+            border: 10px solid $color-borde-articulo;
+            padding: 1%;
+            margin:1%;
+            font-size: 20px;
+        }
+        
+    
+        .recetas{
+            display: inline-block;
+            height: 1200px;
+            width: 80%;
+            background-color: white;
+            border: 10px solid burlywood;
+            padding: 50px;
+            margin: 20px;
+            overflow: scroll;
+    
+            .listaReceta{
+                display: block;
+                list-style: decimal;
+                color: black;
+            }
+        }
+        
+    }
+
+    footer{
+        display: grid;
+        grid-template-areas:
+        "titulo2"
+        "botonesRedes1";
+        justify-content: left;
+        align-items: left;
+        background-color: rgb(243, 229, 212);
+        width: $ancho-full;
+
+        .tituloRedes{
+            grid: titulo2;
+            font-size: 20px;
+            width: $ancho-full;
+        }
+
+        .botonRedes{
+            grid: botonesRedes1;
+            width: $ancho-full;
+        }
+
+        .botonRedes:hover{
+            background: $color-botones;
+            cursor: pointer;
+        }
+
+
+    }
+}

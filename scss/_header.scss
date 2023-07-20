@@ -1,0 +1,89 @@
+header{
+
+    font-family: 'Kalam', cursive;
+    display: grid;
+    grid-template-areas:
+    "titulo titulo titulo titulo titulo logo"
+    "cajanav cajanav cajanav cajanav cajanav cajanav";
+
+    justify-items: left;
+
+    background-image: url(../img/fondo.avif);
+
+    background-size: cover;
+
+    /*Logo*/
+
+    .logo{
+        justify-content: right;
+        grid-area: logo;
+        display: block;   
+        animation-name: animacionLogo;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes animacionLogo{
+        0%{
+            width: 275px;
+        }
+        75%{
+            width: 300px;
+        }
+        100%{
+            width: 275px;
+        }
+
+    }
+
+
+    /*Titulo*/
+    
+    .titulo{
+        display: block;
+        grid-area: titulo;
+        width: 800px;
+        height: 100px;
+        padding: 10px 10px 10px 10px;
+        position: relative;
+        justify-content: left;
+        align-items: left;
+        margin-top: 75px;
+        margin-left: 60px;
+    }
+
+    h1{
+        font-size: 75px;
+    }
+    
+
+
+/*Menu*/
+
+    .cajanav {
+    background-color: rgb(243, 229, 212);
+    grid-area: cajanav;
+    display: block;
+    width: 100%;
+    font-size: 100px;
+    padding: 10px;
+    font-size: xx-large;
+    text-align: left;
+    text-decoration: none;
+    align-items: center;
+    }
+
+
+    a{
+        color:black;
+    }
+    
+    
+    
+    li{
+        margin-left: 30px;
+        display: inline;
+        text-decoration: none;
+    }
+}

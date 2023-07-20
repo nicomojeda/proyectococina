@@ -1,199 +1,307 @@
-*{
-    font-family: 'Kalam', cursive;
+header {
+  font-family: "Kalam", cursive;
+  display: grid;
+  grid-template-areas: "titulo titulo titulo titulo titulo logo" "cajanav cajanav cajanav cajanav cajanav cajanav";
+  justify-items: left;
+  background-image: url(../img/fondo.avif);
+  background-size: cover;
+  /*Logo*/
+  /*Titulo*/
+  /*Menu*/
+}
+header .logo {
+  justify-content: right;
+  grid-area: logo;
+  display: block;
+  animation-name: animacionLogo;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes animacionLogo {
+  0% {
+    width: 275px;
+  }
+  75% {
+    width: 300px;
+  }
+  100% {
+    width: 275px;
+  }
+}
+header .titulo {
+  display: block;
+  grid-area: titulo;
+  width: 800px;
+  height: 100px;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  justify-content: left;
+  align-items: left;
+  margin-top: 75px;
+  margin-left: 60px;
+}
+header h1 {
+  font-size: 75px;
+}
+header .cajanav {
+  background-color: rgb(243, 229, 212);
+  grid-area: cajanav;
+  display: block;
+  width: 100%;
+  font-size: 100px;
+  padding: 10px;
+  font-size: xx-large;
+  text-align: left;
+  text-decoration: none;
+  align-items: center;
+}
+header a {
+  color: black;
+}
+header li {
+  margin-left: 30px;
+  display: inline;
+  text-decoration: none;
 }
 
-
-
-
-
-main{
-    display: flex;
-    justify-items: center;
-    background-color: rgb(0, 0, 0);
+main {
+  font-family: "Kalam", cursive;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+main .articuloPagPrincipal {
+  display: inline-block;
+  width: 600px;
+  background-color: rgb(245, 170, 189);
+  border: 10px solid rgb(15, 156, 58);
+  padding: 50px;
+  margin: 20px;
+  font-size: xx-large;
+}
+main .articuloRegistro {
+  display: block;
+  width: 500px;
+  height: 650px;
+  background-color: rgb(245, 170, 189);
+  border: 10px solid rgb(238, 156, 156);
+  padding: 50px;
+  margin: 20px;
+  font-size: large;
+}
+main .articuloRegistro .botonRegistro {
+  padding: 15px, 35px;
+  border-radius: 10px;
+  border: none;
+}
+main .articuloRegistro .botonRegistro:hover {
+  background: radial-gradient(circle, rgb(243, 229, 212), rgb(207, 186, 160));
+  cursor: pointer;
+}
+main .articuloRegistro .listaVertical {
+  display: block;
+}
+main .registroPromo {
+  display: block;
+  width: 600px;
+  height: 600px;
+  margin: 50px;
+}
+main .registroPromo a {
+  color: white;
+  text-decoration: none;
+  text-transform: scale(75px, 75px);
+}
+main .registroPromo a:hover {
+  transition: width 2s;
+}
+main .articuloQueComemos {
+  display: inline-block;
+  width: 700px;
+  background-color: rgb(245, 170, 189);
+  border: 10px solid rgb(15, 156, 58);
+  padding: 50px;
+  margin-left: 600px;
+  font-size: xx-large;
+}
+main .recetas {
+  display: inline-block;
+  height: 1200px;
+  width: 600px;
+  background-color: white;
+  border: 10px solid burlywood;
+  padding: 50px;
+  margin: 20px;
+  overflow: scroll;
+}
+main .recetas .listaReceta {
+  display: block;
+  list-style: decimal;
+  color: black;
+}
+main a {
+  color: black;
+}
+main li {
+  display: inline;
+  text-decoration: none;
 }
 
-a{
-    color:black;
-}
-
-
-.logo{
+@media (min-width: 0) and (max-width: 576px) {
+  * {
+    font-family: "Kalam", cursive;
+  }
+  header {
+    display: grid;
+    grid-template-areas: "logo" "titulo" "cajanav";
+    justify-items: left;
+    width: 100%;
+    background-repeat: repeat-x;
+  }
+  header .logo {
     grid-area: logo;
     display: block;
-}
-
-.titulo{
+    width: 200px;
+    height: 200px;
+  }
+  header .titulo {
     display: block;
     grid-area: titulo;
-    width: 800px;
+    width: 100%;
     height: 100px;
     padding: 10px 10px 10px 10px;
-    position: relative;
     align-items: left;
     margin-top: 75px;
-}
-
-h1{
-    font-size: 75px;
-}
-
-
-
-
-.cajanav {
-    background-color: rgb(243, 229, 212);
+    margin-left: 2px;
+  }
+  header .cajanav {
     grid-area: cajanav;
     display: block;
-    width: 730px;
-    font-size: 100px;
+    width: 100%;
     padding: 10px;
-    font-size: xx-large;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
-}
-
-li{
-    display: inline;
-    text-decoration: none;
-}
-
-.articulo{
+    font-size: 20px;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  main {
+    align-items: left;
+    width: 100%;
+    background-color: black;
+    /*PAGINA PRINCIPAL*/
+    /*PAGINA REGISTRO*/
+    /*PAGINA QUE COMEMOS*/
+  }
+  main .articuloPagPrincipal {
     display: inline-block;
-    width: 600px;
-    background-color: rgb(247, 244, 106);
-    border: 10px solid rgb(235, 134, 52);
+    width: 80%;
+    background-color: rgb(245, 170, 189);
+    border: 10px solid rgb(15, 156, 58);
     padding: 50px;
     margin: 20px;
-    margin-left: 100px;
     font-size: xx-large;
-}
-
-
-
-/*Estilos pagina registro*/
-
-.articuloRegistro{
+  }
+  main .articuloRegistro {
     display: block;
-    width: 500px;
-    height: 650px;
+    width: 80%;
+    height: 700px;
     background-color: rgb(245, 170, 189);
     border: 10px solid rgb(238, 156, 156);
     padding: 50px;
-    margin: 20px;
-    font-size: large;
-}
-
-.listaVertical{
+    font-size: medium;
+  }
+  main .articuloRegistro .listaVertical {
     display: block;
-}
-
-.registroPromo{
-    display: block;
-    width: 600px;
-    height: 600px;
-    margin-left: 100px;
-    margin-top: 50px;
-}
-
-
-/*Estilos pagina que comemos hoy*/
-
-.articuloQueComemos{
+  }
+  main .registroPromo {
     display: inline-block;
-    width: 700px;
-    background-color: rgb(131, 245, 160);
+    width: 80%;
+    height: 600px;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-decoration-color: white;
+  }
+  main .articuloQueComemos {
+    display: inline-block;
+    width: 90%;
+    background-color: rgb(245, 170, 189);
     border: 10px solid rgb(15, 156, 58);
-    padding: 50px;
-    margin-left: 600px;
-    font-size: xx-large;
-}
-
-/*Estilos pagina veggies*/
-
-.listaReceta{
-    display: block;
-    list-style: decimal;
-    color: black;
-}
-
-.recetas{
+    padding: 1%;
+    margin: 1%;
+    font-size: 20px;
+  }
+  main .recetas {
     display: inline-block;
     height: 1200px;
-    width: 600px;
+    width: 80%;
     background-color: white;
     border: 10px solid burlywood;
     padding: 50px;
     margin: 20px;
     overflow: scroll;
-}
-
-/*FOOTER*/
-
-footer{
-display:grid;
-justify-items: center;
-background-color: rgb(243, 229, 212);
-}
-
-.redes{
-    margin: 30px;
-}
-
-
-/*GRID*/
-
-header{
+  }
+  main .recetas .listaReceta {
+    display: block;
+    list-style: decimal;
+    color: black;
+  }
+  footer {
     display: grid;
-    grid-template-areas:
-    "logo titulo titulo titulo titulo"
-    "cajanav cajanav cajanav cajanav cajanav";
-
-    justify-items: center;
-
-    background-image: url(../img/fondo.avif);
-
-    background-size: cover;
-    background-repeat: repeat-x;
+    grid-template-areas: "titulo2" "botonesRedes1";
+    justify-content: left;
+    align-items: left;
+    background-color: rgb(243, 229, 212);
+    width: 100%;
+  }
+  footer .tituloRedes {
+    grid: titulo2;
+    font-size: 20px;
+    width: 100%;
+  }
+  footer .botonRedes {
+    grid: botonesRedes1;
+    width: 100%;
+  }
+  footer .botonRedes:hover {
+    background: radial-gradient(circle, rgb(243, 229, 212), rgb(207, 186, 160));
+    cursor: pointer;
+  }
+}
+/*FOOTER*/
+footer {
+  display: grid;
+  grid-template-areas: "tituloRedes tituloRedes tituloRedes tituloRedes tituloRedes" "contenedorRedes contenedorRedes contenedorRedes contenedorRedes contenedorRedes";
+  font-family: "Kalam", cursive;
+  justify-items: center;
+  align-items: center;
+}
+footer .tituloRedes {
+  margin-top: 20px;
+  display: inline-block;
+  grid-area: tituloRedes;
+}
+footer .contenedorRedes {
+  grid-area: contenedorRedes;
+  justify-items: center;
+  align-items: center;
+}
+footer .botonRedes {
+  display: inline-block;
+  padding: 15px, 35px;
+  margin: 50px, 30px;
+  border-radius: 10px;
+  border: none;
+}
+footer .botonRedes a {
+  font-size: large;
+}
+footer .botonRedes:hover {
+  background: radial-gradient(circle, rgb(243, 229, 212), rgb(207, 186, 160));
+  cursor: pointer;
 }
 
-@media (min-width: 320px) and (max-width: 576px){
-    header{
-        display: grid;
-        grid-template-areas:
-        "logo logo"
-        "titulo titulo"
-        "cajanav cajanav";
-        justify-items: left;
-
-    }
-
-    .cajanav {
-        grid-area: cajanav;
-        display: block;
-        width: 500px;
-        padding: 10px;
-        text-align: left;
-        text-decoration: none;
-        font-size: 40px;
-    }
-
-    .logo{
-        grid-area: logo;
-        display: block;
-    }
-
-    .titulo{
-        display: block;
-        grid-area: titulo;
-        width: 800px;
-        height: 100px;
-        padding: 10px 10px 10px 10px;
-        align-items: left;
-        margin-top: 75px;
-    }
-
-    h1{
-        font-size: 50px;
-    }
-
-}
+/*# sourceMappingURL=estilos.css.map */

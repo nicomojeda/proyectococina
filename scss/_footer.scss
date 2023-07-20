@@ -1,0 +1,40 @@
+/*FOOTER*/
+
+footer{
+    display: grid;
+    grid-template-areas: 
+    "tituloRedes tituloRedes tituloRedes tituloRedes tituloRedes"
+    "contenedorRedes contenedorRedes contenedorRedes contenedorRedes contenedorRedes";
+    font-family: 'Kalam', cursive;
+    justify-items: center;
+    align-items:  center;
+
+    .tituloRedes{
+        margin-top: 20px;
+        display: inline-block;
+        grid-area: tituloRedes;
+    }
+
+    .contenedorRedes{
+        grid-area: contenedorRedes;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .botonRedes{
+        display: inline-block;
+        padding: 15px, 35px;
+        margin: 50px, 30px;
+        border-radius: 10px;
+        border: none;
+        a{
+            font-size: large;
+        }
+    }
+
+    .botonRedes:hover{
+        background: $color-botones;
+        cursor: pointer;
+    }
+
+}

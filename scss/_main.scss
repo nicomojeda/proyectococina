@@ -1,0 +1,109 @@
+main{
+
+    font-family: 'Kalam', cursive;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+
+    .articuloPagPrincipal{
+        display: inline-block;
+        width: 600px;
+        background-color: $color-articulo;
+        border: 10px solid $color-borde-articulo;
+        padding: 50px;
+        margin: 20px;
+        font-size: xx-large;
+    }
+
+    .articuloRegistro{
+        display: block;
+        width: 500px;
+        height: 650px;
+        background-color: $color-articulo;
+        border: 10px solid rgb(238, 156, 156);
+        padding: 50px;
+        margin: 20px;
+        font-size: large;
+
+        .botonRegistro{
+            padding: 15px, 35px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .botonRegistro:hover{
+            background: $color-botones;
+            cursor: pointer;
+        }
+
+        .listaVertical{
+            display: block;
+        }
+
+    }
+
+    .registroPromo{
+        display: block;
+        width: 600px;
+        height: 600px;
+        margin: 50px;
+
+        a{
+            color:white;
+            text-decoration: none;
+            text-transform: scale(75px,75px);
+        }
+
+        a:hover{
+            transition: width 2s;
+        }
+
+    }
+
+
+
+    .articuloQueComemos{
+        display: inline-block;
+        width: 700px;
+        background-color: $color-articulo;
+        border: 10px solid $color-borde-articulo;
+        padding: 50px;
+        margin-left: 600px;
+        font-size: xx-large;
+    }
+    
+
+    .recetas{
+        display: inline-block;
+        height: 1200px;
+        width: 600px;
+        background-color: white;
+        border: 10px solid burlywood;
+        padding: 50px;
+        margin: 20px;
+        overflow: scroll;
+
+        .listaReceta{
+            display: block;
+            list-style: decimal;
+            color: black;
+        }
+    }
+    
+
+    a{
+        color:black;
+    }
+    
+    
+    
+    li{
+        display: inline;
+        text-decoration: none;
+    }
+    
+
+
+
+}
