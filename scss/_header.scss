@@ -26,13 +26,13 @@ header{
     
     @keyframes animacionLogo{
         0%{
-            width: 275px;
+            transform: rotate(90deg);
         }
         75%{
-            width: 300px;
+            transform: rotate(180deg);
         }
         100%{
-            width: 275px;
+            transform: rotate(270deg);
         }
 
     }
@@ -51,10 +51,23 @@ header{
         align-items: left;
         margin-top: 75px;
         margin-left: 60px;
+        transition: margin-top 2s;
     }
+
+    .titulo:hover{
+        margin-top: 10px;
+    }
+
+
 
     h1{
         font-size: 75px;
+        transition: height 2s;
+    }
+
+    
+    h1:hover{
+        font-size: 80px;
     }
     
 
@@ -66,24 +79,28 @@ header{
     grid-area: cajanav;
     display: block;
     width: 100%;
-    font-size: 100px;
     padding: 10px;
     font-size: xx-large;
     text-align: left;
     text-decoration: none;
-    align-items: center;
+    align-items: map-get($estilos-genericos, centro);
     }
 
 
     a{
-        color:black;
+        color: map-get($estilos-genericos, color-primario);
+        transition: height 2s;
     }
-    
     
     
     li{
         margin-left: 30px;
         display: inline;
         text-decoration: none;
+        transition: heigth 2s;
     }
+
+    
+
+
 }

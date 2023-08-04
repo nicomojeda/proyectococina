@@ -6,26 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetas para todos</title>
     <link rel="shortcut icon" href="./img/favicon-recetas.png">
+    <meta name="pagina de recetas"content="esto es una pagina de recetas">
+    <meta name="keywords" content="cocina, comida, postre, veggies, tutoriales">
+
+
 
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
-    <!--Estilos-->
-    <link rel="stylesheet" href="./css/estilos.css">
+
    <style>
         @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
     </style>
+
+        <!--Estilos-->
+    <link rel="stylesheet"  type="text/css" href="./CSS/estilos.css">
 </head>
 <body>
     <header>
-            <section class = "logo">
+            <div class = "logo">
                 <img src="../img/Logo2.png" class="logo" alt="Logo sombrero de chef">
-            </section>
-            <section class = "titulo">
+            </div>
+            <div class = "titulo">
                 <h1>Recetas para todos</h1>
-            </section>
+            </div>
             <nav class="cajanav">
                 <ul>
                     <li><a href="./Pages/registro.html " style=" text-decoration:none">Registrate</a></li>
@@ -35,13 +41,15 @@
                 </ul>
             </nav>
     </header>
-    <main class="conteiner-fluid row justify-content-center">
-        <section class="articuloPagPrincipal row col-12 col-lg-8">
+    <main class="conteiner-sm text-center row align-items-center">
+
+            <!--ARTICULOS DE PAGINA PRINCIPAL-->
+        <section class="articuloPagPrincipal row col-sm-12 col-lg-6">
             <h2>Hacé tu propia masa madre</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/oEwrLEnJtnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
             clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
-        <section class="articuloPagPrincipal row col-12 col-lg-6">
+        <section class="articuloPagPrincipal row col-sm-12 col-lg-6">
             <h2>Hacé tu pan casero</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/jTIe9_GDlhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
              clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -50,13 +58,15 @@
 
     <!--FOOTER + REDES-->
     <footer>
-        <h3 class="tituloRedes">¡Encontranos en nuestras redes!</h3>
+        <div class="tituloRedes">
+            <h3>¡Encontranos en nuestras redes!</h3>
+        </div>
         <div class="contenedorRedes">
-            <button type="button" class="botonRedes"><a href="https://www.twitter.com/" style=" text-decoration:none">Twitter</a></button>
-            <button type="button" class="botonRedes"><a href="https://www.instagram.com/" style=" text-decoration:none">Instagram</a></button>
-            <button type="button" class="botonRedes"><a href="https://www.Facebook.com/" style=" text-decoration:none">Facebook</a></button>
-            <button type="button" class="botonRedes"><a href="https://www.YouTube.com/" style=" text-decoration:none">YouTube</a></button>
-            <button type="button" class="botonRedes"><a href="https://www.tiktok.com/" style=" text-decoration:none">TikTok</a></button>
+            <button type="button" class="botonTwitter"><a href="https://www.twitter.com/" style=" text-decoration:none">Twitter</a></button>
+            <button type="button" class="botonInstagram"><a href="https://www.instagram.com/" style=" text-decoration:none">Instagram</a></button>
+            <button type="button" class="botonFacebook"><a href="https://www.Facebook.com/" style=" text-decoration:none">Facebook</a></button>
+            <button type="button" class="botonYoutube"><a href="https://www.YouTube.com/" style=" text-decoration:none">YouTube</a></button>
+            <button type="button" class="botonTiktok"><a href="https://www.tiktok.com/" style=" text-decoration:none">TikTok</a></button>
         </div>
     </footer>
 </body>

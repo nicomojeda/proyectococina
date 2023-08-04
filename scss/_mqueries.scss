@@ -30,7 +30,7 @@
         .titulo{
             display: block;
             grid-area: titulo;
-            width: $ancho-full;
+            width: 95%;
             height: 100px;
             padding: 10px 10px 10px 10px;
             align-items: left;
@@ -52,15 +52,19 @@
         h1{
             font-size: 40px;
         }
+
+        li{
+            margin-left: 10px;
+        }
     
     
     }
 
-
-    main{
-        align-items: left;
-        width: 100%;
-        background-color: black;
+     main{
+        align-items: map-get($estilos-genericos, centro);
+        background-color: map-get($estilos-genericos, color-primario);
+        display: flex;
+        width: 103.3%;
 
         /*PAGINA PRINCIPAL*/
         .articuloPagPrincipal{
@@ -97,7 +101,7 @@
             height: 600px;
             margin-top: 10px;
             margin-left: 20px;
-            text-decoration-color: white;
+            text-decoration-color: map-get($estilos-genericos, color-secundario);
         }
     
         /*PAGINA QUE COMEMOS*/
@@ -116,7 +120,7 @@
             display: inline-block;
             height: 1200px;
             width: 80%;
-            background-color: white;
+            background-color: map-get($estilos-genericos, color-secundario);
             border: 10px solid burlywood;
             padding: 50px;
             margin: 20px;
@@ -125,38 +129,34 @@
             .listaReceta{
                 display: block;
                 list-style: decimal;
-                color: black;
+                color: map-get($estilos-genericos, color-primario);
             }
         }
         
     }
 
+
+
     footer{
-        display: grid;
-        grid-template-areas:
-        "titulo2"
-        "botonesRedes1";
-        justify-content: left;
-        align-items: left;
+        display: flex;
+        justify-content: map-get($estilos-genericos, centro);
+        align-items: map-get($estilos-genericos, centro);
         background-color: rgb(243, 229, 212);
         width: $ancho-full;
 
+        @mixin formato-footer{
+            width: $ancho-full;
+            margin: 10px;
+        }
+
         .tituloRedes{
-            grid: titulo2;
+            @include formato-footer;
             font-size: 20px;
-            width: $ancho-full;
         }
 
-        .botonRedes{
-            grid: botonesRedes1;
-            width: $ancho-full;
+        .contenedorRedes{
+            @include formato-footer;
         }
-
-        .botonRedes:hover{
-            background: $color-botones;
-            cursor: pointer;
-        }
-
 
     }
 }

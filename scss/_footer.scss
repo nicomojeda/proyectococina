@@ -6,8 +6,8 @@ footer{
     "tituloRedes tituloRedes tituloRedes tituloRedes tituloRedes"
     "contenedorRedes contenedorRedes contenedorRedes contenedorRedes contenedorRedes";
     font-family: 'Kalam', cursive;
-    justify-items: center;
-    align-items:  center;
+    justify-items: map-get($estilos-genericos, centro);
+    align-items:  map-get($estilos-genericos, centro);
 
     .tituloRedes{
         margin-top: 20px;
@@ -17,11 +17,11 @@ footer{
 
     .contenedorRedes{
         grid-area: contenedorRedes;
-        justify-items: center;
-        align-items: center;
+        justify-items: map-get($estilos-genericos, centro);
+        align-items: map-get($estilos-genericos, centro);
     }
     
-    .botonRedes{
+    .botonTwitter{
         display: inline-block;
         padding: 15px, 35px;
         margin: 50px, 30px;
@@ -32,9 +32,29 @@ footer{
         }
     }
 
-    .botonRedes:hover{
+    .botonTwitter:hover{
         background: $color-botones;
         cursor: pointer;
     }
+
+    .botonInstagram{
+        @extend .botonTwitter;
+    }
+
+    .botonFacebook{
+        @extend .botonTwitter;
+    }
+
+    .botonYoutube{
+        @extend .botonTwitter;
+    }
+
+    .botonTiktok{
+        @extend .botonTwitter;
+    }
+
+
+
+
 
 }
